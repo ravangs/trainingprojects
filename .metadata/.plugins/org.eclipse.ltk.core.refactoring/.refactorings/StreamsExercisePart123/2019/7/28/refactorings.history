@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;StrinUtils&apos; to &apos;StringUtils&apos;&#x0A;- Original project: &apos;StreamsExercisePart123&apos;&#x0A;- Original element: &apos;StrinUtils&apos;&#x0A;- Renamed element: &apos;StringUtils&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;StrinUtils&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{StrinUtils.java[StrinUtils" matchStrategy="1" name="StringUtils" qualified="false" references="true" similarDeclarations="false" stamp="1562925265401" textual="false" version="1.0"/>
+</session>

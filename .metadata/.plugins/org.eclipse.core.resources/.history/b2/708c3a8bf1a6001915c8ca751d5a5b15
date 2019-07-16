@@ -1,0 +1,65 @@
+package com.visa.training.jdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+//DAO class has CRUD + Query methods
+public class ProductDAO {
+
+	public static void save(Product toBeSaved) {
+
+		try (Connection c = JdbcUtil.getConnection();) {
+			Statement insertStatement = c.createStatement();
+			/*
+			 * String sql = "INSERT into product " + "VALUES(" + toBeSaved.getId() + ",'" +
+			 * toBeSaved.getName() + "'" + "," + toBeSaved.getPrice() + "," +
+			 * toBeSaved.getQoh() + ")";
+			 */
+			
+			String pSql = "insert into product(product_name,product_price,product_qoh) values(?,?,?)";
+			PreparedStatement s = c.prepareStatement(pSql);
+			s.setString(1,toBeSaved.getName());
+			s.setFloat(2,toBeSaved.getPrice());
+			s.setInt(3,toBeSaved.getQoh());
+
+			s.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static Product findById(int id) {
+
+		try (Connection c = JdbcUtil.getConnection();) {
+			Statement findStatement = c.createStatement();
+
+			ResultSet rs = findStatement.executeQuery("SELECT * FROM product WHERE product_id =" + id);
+			rs.next();
+			return (new Product(rs.getInt("product_id"), rs.getString("product_name"), rs.getFloat("product_price"),
+					rs.getInt("product_qoh")));
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	/*
+	 * public List<Product> findAll(){
+	 * 
+	 * }
+	 * 
+	 * public void remove(int id) {
+	 * 
+	 * }
+	 * 
+	 * public void update(Product updated) {
+	 * 
+	 * }
+	 */
+
+}

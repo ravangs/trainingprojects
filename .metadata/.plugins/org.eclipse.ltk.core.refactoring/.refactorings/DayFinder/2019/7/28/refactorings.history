@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;DOW&apos; in &apos;DOWFinder.findDOW(...)&apos; to &apos;dow&apos;&#x0A;- Original project: &apos;DayFinder&apos;&#x0A;- Original element: &apos;DOWFinder.findDOW(int, int, int).DOW&apos;&#x0A;- Renamed element: &apos;DOW&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;DOW&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{DOWFinder.java[DOWFinder~findDOW~I~I~I@DOW!920!930!927!929!QString;!0!false" name="dow" references="true" stamp="1562577015617" version="1.0"/>
+</session>

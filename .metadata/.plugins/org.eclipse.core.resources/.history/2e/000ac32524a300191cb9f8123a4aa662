@@ -1,0 +1,34 @@
+
+public class FixedStackArray implements Stack {
+	
+	Object[] stackArray;
+	int topOfStack = -1;
+	
+	public FixedStackArray(int StackSize) {
+		stackArray = new Object[StackSize];
+	}
+	
+	public void push(Object element) {
+		try {
+			stackArray[++topOfStack] = element;
+		}
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("Stack Over Flow");
+		}
+	}
+	
+	public Object pop() {
+		try {
+			return stackArray[topOfStack--];
+		}
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("Stack Under Flow");
+			return null;
+		}
+		
+		
+	}
+	
+	
+
+}

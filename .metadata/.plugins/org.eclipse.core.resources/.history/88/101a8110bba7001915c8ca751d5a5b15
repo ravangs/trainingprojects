@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cars</title>
+</head>
+<body>
+<form action=carservlet method="post">
+
+Book1 : <input type="checkbox" name="cars" value="Car1"  /><br />
+Book2 : <input type="checkbox" name="cars" value="Car2"  /><br />
+Book3 : <input type="checkbox" name="cars" value="Car3"  /><br />
+Book4 : <input type="checkbox" name="cars" value="Car4"  /><br />
+Book5 : <input type="checkbox" name="cars" value="Car5"  /><br />
+
+<input type=submit value="submit">
+
+</form>
+
+</body>
+</html>

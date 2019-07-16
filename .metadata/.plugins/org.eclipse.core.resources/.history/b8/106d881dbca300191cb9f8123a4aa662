@@ -1,0 +1,18 @@
+
+public class BetterString {
+	
+	public static betterString(String s1, String s2,TwoStringPredicate function) {
+		if(function) {
+			return s1;
+		}
+		else {
+			return s2;
+		}
+	}
+	
+	@FunctionalInterface
+	interface TwoStringPredicate{
+		public boolean compareString(String s1,String s2);
+	}
+	
+}

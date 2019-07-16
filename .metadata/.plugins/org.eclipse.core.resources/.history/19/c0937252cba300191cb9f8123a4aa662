@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class ElementUtils {
+
+	public static void main(String[] args) {
+		ex1();
+	}
+
+	private static void ex1() {
+        List<String> words = new ArrayList<String>(Arrays.asList("error","this","is","an","array","which","has","words","like","xylophone"));
+        //List<String> shortWords = allMatches(words,s -> s.length() < 4);
+        List<String> wordsWithB = allMatches(words,s -> s.contains("b"));
+        //List<String> evenLengthWords = allMatches(words,s -> (s.length()%4)==0);
+
+        //System.out.println(evenLengthWords);
+        //System.out.println(shortWords);
+        System.out.println(wordsWithB);
+	}
+
+	public static List<String> allMatches(List<String> stringList, Predicate<String> stringPredicate) {
+		Iterator<String> i = stringList.iterator();
+		while (i.hasNext()) {
+			if (!(stringPredicate.test(i.next()))) {
+				i.remove();
+			}
+		}
+		return stringList;
+	}
+
+}

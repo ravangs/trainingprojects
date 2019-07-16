@@ -1,0 +1,8 @@
+
+@FunctionalInterface
+public interface StringUtils {
+	
+	
+	public int eChecker(String s1,String s2);
+	
+}

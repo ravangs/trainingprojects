@@ -1,0 +1,50 @@
+
+public class ChemicalElement {
+	
+	public int atomicNumber;
+	public String atomicName;
+	public String fullName;
+	
+	private static int[] alkaliMetal = { 3 , 11 , 19 , 37 , 55 , 87};
+	
+	private static int[] metal = { 13 , 49 , 50 , 81 , 82 , 83 , 113 , 114 , 115 , 116};
+	
+	ChemicalElement(int atomicNumber, String atomicName , String fullName){
+		this.atomicNumber = atomicNumber;
+		this.atomicName = atomicName;
+		this.fullName = fullName;
+	}
+		
+		
+	public boolean isAlkaliMetal() {	
+		
+		for(int i = 0;i<alkaliMetal.length;i++) {
+			if(this.atomicNumber == alkaliMetal[i]) {
+				return true;
+			};
+		}
+		return false;
+	}
+	
+	public boolean isMetal() {
+		
+		for(int i = 0;i<alkaliMetal.length;i++) {
+			if(this.atomicNumber == metal[i]) {
+				return true;
+			};
+		}
+		return false;
+	}
+	
+	public boolean isTransistionMetal() {
+		
+		if((this.atomicNumber >= 21 && this.atomicNumber <= 31) || 
+			(this.atomicNumber >= 39 && this.atomicNumber <= 48) ||
+			(this.atomicNumber >= 72 && this.atomicNumber <= 80) ||
+			(this.atomicNumber >= 104 && this.atomicNumber <= 112)) {
+			return true;
+		}
+		return false;
+	}
+	
+}

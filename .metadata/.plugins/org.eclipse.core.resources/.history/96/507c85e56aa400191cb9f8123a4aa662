@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StrinUtils {
+
+	public static void main(String[] args) {
+		List<String> words = new ArrayList<>(
+				Arrays.asList("this", "is", "a", "test", "of", "sorting", "lists", "made", "from", "array"));
+		// ex1(words);
+		// ex2(words);
+		ex3(words);
+	}
+
+	private static void ex3(List<String> words) {
+		List<String> excitingWords = words.stream().map(s -> s + "!").collect(Collectors.toList());
+		List<String> upperCaseWords = words.stream().map(String::toUpperCase).collect(Collectors.toList());
+		System.out.println(excitingWords);
+		System.out.println(upperCaseWords);
+
+	}
+
+	private static void ex2(List<String> words) {
+		words.stream().forEach(System.out::println);
+
+	}
+
+	private static void ex1(List<String> words) {
+		words.stream().forEach(s -> System.out.println("  " + s));
+	}
+}
