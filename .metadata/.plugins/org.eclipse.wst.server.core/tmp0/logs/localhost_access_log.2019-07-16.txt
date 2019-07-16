@@ -117,3 +117,10 @@
 127.0.0.1 - - [16/Jul/2019:11:30:22 +0000] "POST /mywebapp/bookservlet HTTP/1.1" 200 514
 127.0.0.1 - - [16/Jul/2019:11:30:24 +0000] "POST /mywebapp/carservlet HTTP/1.1" 200 531
 127.0.0.1 - - [16/Jul/2019:11:30:30 +0000] "POST /mywebapp/bikeservlet HTTP/1.1" 500 1581
+181.192.12.157 - - [16/Jul/2019:11:40:21 +0000] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [16/Jul/2019:11:55:00 +0000] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [16/Jul/2019:11:55:00 +0000] "GET /mywebapp/ HTTP/1.1" 200 342
+127.0.0.1 - - [16/Jul/2019:11:55:02 +0000] "GET /mywebapp/books.html HTTP/1.1" 200 528
+127.0.0.1 - - [16/Jul/2019:11:55:05 +0000] "POST /mywebapp/addbooks HTTP/1.1" 200 511
+127.0.0.1 - - [16/Jul/2019:11:55:07 +0000] "POST /mywebapp/addcars HTTP/1.1" 200 528
+127.0.0.1 - - [16/Jul/2019:11:55:10 +0000] "POST /mywebapp/addbikes HTTP/1.1" 200 220

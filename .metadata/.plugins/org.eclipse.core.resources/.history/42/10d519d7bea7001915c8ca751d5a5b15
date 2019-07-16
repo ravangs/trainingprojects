@@ -5,7 +5,7 @@
 <title>Cars</title>
 </head>
 <body>
-<form action=addcars method="post">
+<form action=carservlet method="post">
 
 Car1 : <input type="checkbox" name="cars" value="Car1"  /><br />
 Car2 : <input type="checkbox" name="cars" value="Car2"  /><br />
