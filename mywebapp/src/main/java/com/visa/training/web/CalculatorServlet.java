@@ -37,10 +37,12 @@ public class CalculatorServlet extends HttpServlet {
 			result = n1 / n2;
 			break;
 		}
-		
-		PrintWriter out = response.getWriter();
-		out.println(n1+" "+op+" "+n2+" = "+result);
-
+		/*
+		 * PrintWriter out = response.getWriter();
+		 * out.println(n1+" "+op+" "+n2+" = "+result);
+		 */
+		request.setAttribute("result", result);
+		request.getRequestDispatcher("calcresult_el.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
